@@ -8,7 +8,7 @@ spec:
     image: nginx
     envFrom:
     - configMapRef:
-      name: myconfig
+        name: myconfig
 
 # kind: Pod
 # apiVersion: v1
