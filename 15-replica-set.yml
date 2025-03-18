@@ -20,6 +20,6 @@ spec:
         teir: web
     spec:
       containers:
-        name: nginx
+      - name: nginx
         image: nginx
 # pod is a subset of replica, so no need of mentioning apiVersion and kind
