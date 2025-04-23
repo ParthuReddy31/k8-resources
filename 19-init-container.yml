@@ -6,7 +6,6 @@ metadata:
     app.kubernetes.io/name: MyApp
 spec:
   # one pod can contain multiple containers
-  serviceAccount: expense-mysql-secret
   containers:
   - name: nginx
     image: nginx
