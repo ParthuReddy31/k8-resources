@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  namespace: expense
+spec:
+  # one pod can contain multiple containers
+  serviceAccount: expense-mysql-secret
+  containers:
+    - name: nginx
+      image: nginx
+  initContainers:
+  - name: init-myservice
+    image: busybox:1.28
+    command: ['sh', '-c', "until nslookup google.com; do echo waiting for myservice; sleep 10; done"]
